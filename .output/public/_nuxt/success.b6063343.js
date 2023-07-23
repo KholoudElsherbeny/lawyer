@@ -1,0 +1,1 @@
+import{e as t}from"./entry.7aaca005.js";import{J as s,K as o,L as _,P as n}from"./swiper-vue.6e12f478.js";const c={},r={class:"notify_wrapper"},a={class:"notify_content"};function i(e,f){return s(),o("div",r,[_("div",a,[n(e.$slots,"default")])])}const d=t(c,[["render",i]]),m=""+new URL("success.4ce03fce.svg",import.meta.url).href;export{m as _,d as a};

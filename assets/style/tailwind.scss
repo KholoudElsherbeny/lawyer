@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .base-btn {
+
+    @apply py-3 px-11 bg-primary rounded-md flex border-primary items-center justify-center w-fit text-lg text-secondary font-bold ease-in-out duration-300 z-10 overflow-hidden relative;
+
+    &::before {
+      content: "";
+      @apply bg-primary text-secondary border-secondary rounded-lg absolute block ease-in-out duration-300;
+      left: 50%;
+      transform: translateX(-50%) scaleY(1) scaleX(1.25);
+      top: 100%;
+      width: 140%;
+      height: 180%;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      @apply bg-primary border-secondary rounded-lg absolute text-secondary block ease-in-out duration-300;
+      left: 55%;
+      transform: translateX(-50%) scaleY(1) scaleX(1.45);
+      top: 180%;
+      width: 160%;
+      height: 190%;
+
+      z-index: -1;
+    }
+
+    &:hover {
+
+
+      &::before {
+        @apply bg-[#f1ca7e] border-secondary text-primary;
+        top: -35%;
+        transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+      }
+
+      &::after {
+        top: -45%;
+        @apply bg-[#f1ca7e] border-secondary text-primary;
+        transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+      }
+
+    }
+
+    &:disabled{
+      @apply bg-[#F0F0F0] text-[#CACBD2];
+      &:hover {
+        &::before,&::after{
+          content: unset
+        }
+      }
+    }
+  }
+
+  .base-link {
+
+    @apply text-primary font-bold ease-in-out duration-300;
+
+    &:hover {
+      @apply text-white
+    }
+
+    i {
+      @apply ms-2
+    }
+
+
+  }
+
+  .actions {
+    @apply flex items-center;
+
+    a,
+    button {
+      &:not(:last-child) {
+        @apply me-4
+      }
+    }
+  }
+  .input_wrapper{
+    @apply  mb-3 last:mb-0;
+    textarea{
+      @apply block border font-medium rounded-xl py-5 px-5 focus:outline-none focus:shadow-none focus:border-primary w-full caret-primary;
+      transition: border .3s ease-in-out;
+    }
+   label{
+    @apply text-text-dark text-sm block mb-2
+   }
+   input{
+    @apply block border font-medium rounded-xl py-4 px-5 focus:outline-none focus:shadow-none focus:border-primary w-full caret-primary;
+    transition: border .3s ease-in-out;
+    &.otp-input {
+      max-width: 80px;
+    }
+   }
+   &.error{
+    label{
+      @apply text-red-500
+    }
+    input{
+      @apply text-red-500 border-red-500;
+    
+    }
+   }
+   &.otp_inputs{
+    &>div{
+
+      @apply justify-center;
+      &>div{
+        @apply me-3 last:me-0;
+        input{
+          @apply text-center border-black font-bold text-xl
+        }
+      }
+      
+    }
+   }
+  }
+
+
+}
+
+@layer base{
+  input[type=number].appearance-none::-webkit-inner-spin-button,
+  input[type=number].appearance-none::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number].appearance-none {
+    -moz-appearance:textfield;
+  }
+}

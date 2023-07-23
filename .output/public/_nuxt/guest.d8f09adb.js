@@ -1,0 +1,1 @@
+import{j as e,n as o}from"./entry.7aaca005.js";import{u as t}from"./cookie.4132d486.js";import"./swiper-vue.6e12f478.js";const n=e((r,s)=>{if(t("session-token").value)return o("/")});export{n as default};

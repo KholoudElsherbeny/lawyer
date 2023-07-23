@@ -1,0 +1,1 @@
+import{j as r,n as e}from"./entry.7aaca005.js";import{u as o}from"./cookie.4132d486.js";import"./swiper-vue.6e12f478.js";const u=r((t,i)=>{if(o("session-token").value)return e("/");if(!o("phoneToVerify").value)return e("/auth/login")});export{u as default};
